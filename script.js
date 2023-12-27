@@ -12,7 +12,7 @@ const getSum = () => {
 
 	newRow.appendChild(newTh);
 
-	let newCell1 = newRow.insertCell(1);
+	let newCell1 = newRow.insertCell(1); 
 	let row = table.getElementsByTagName('tr');
 
 	let sum = 0;
