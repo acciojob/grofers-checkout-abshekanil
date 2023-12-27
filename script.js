@@ -11,6 +11,27 @@ const getSum = () => {
 	newTh.textContent = 'Total Price';
 
 	newRow.appendChild(newTh);
+
+	let newCell1 = newRow.insertCell(1);
+	let row = table.getElementsByTagName('tr');
+
+	let sum = 0;
+
+	for(let i=1; i<row.length; i++)
+		{
+			let priceCell = row[i].getElementsByClassName('price')[0];
+			if(priceCell)
+			{
+				let price = parseFloat(priceCell.textContent.trim());
+				if(!isNaN(price))
+				{
+					sum+=price;
+				}
+			}
+		}
+	
+	newCell1.innerHTML = sum;
+	
   
 };
 
