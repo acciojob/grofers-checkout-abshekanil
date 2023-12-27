@@ -2,7 +2,7 @@ const getSumBtn = document.createElement("button");
 getSumBtn.append("Get Total Price");
 document.body.appendChild(getSumBtn);
 
-const getSum = () => {
+const getSum = () => { 
 //Add your code here
 	let table = document.getElementsByTagName('table')[0];
 	let newRow = table.insertRow(table.rows.length);
@@ -13,6 +13,7 @@ const getSum = () => {
 	newRow.appendChild(newTh);
 
 	let newCell1 = newRow.insertCell(1); 
+	newCell1.setAttribute('id','ans');
 	let row = table.getElementsByTagName('tr');
 
 	let sum = 0;
